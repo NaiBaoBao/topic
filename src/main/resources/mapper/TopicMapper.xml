@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.topic.dao.TopicDao">
+    <select id="list" resultType="com.example.topic.domain.Topic">
+        select * from topic;
+    </select>
+    <select id="detail" parameterType="integer" resultType="com.example.topic.domain.Topic">
+        select  id,
+                gmt_create,
+                gmt_modified,
+                is_deleted,
+                pic_url_list,
+                content
+                from topic where id=#{id}
+    </select>
+</mapper>
