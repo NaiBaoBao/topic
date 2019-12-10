@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value = "com.example.topic.dao")
+@MapperScan(value = "com.example.topic.mapper")
 public class TopicApplication {
 
 	public static void main(String[] args) {
